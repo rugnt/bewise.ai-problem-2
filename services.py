@@ -14,7 +14,7 @@ from models.database import User, Audio
 from sqlalchemy import select
 
 
-async def convert_audio_and_add_in_db(user_id: int, token: str, wav_file: UploadFile) -> tuple:
+async def convert_audio_and_add_in_db(user_id: int, token: str, wav_file: UploadFile) -> int:
     '''Получает загруженный файл, конвертирует, записывает в бд и '''
     async with async_session() as session:
         user = None
@@ -62,7 +62,7 @@ async def get_audio_from_db(user_id: int, audio_id: int) -> int:
     return audio_url
 
 
-async def create_user_in_db(username: str) -> tuple:
+async def create_user_in_db(username: str) -> tuple[int, str]:
     '''Создает запись о пользователе'''
     # Валидация пользователя
     if not re.fullmatch(r'[a-zA-Z][a-zA-Z0-9_-]{2,63}', username):
