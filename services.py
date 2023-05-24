@@ -17,9 +17,10 @@ from sqlalchemy import select
 async def convert_audio_and_add_in_db(user_id: int, token: str, wav_file: UploadFile) -> tuple:
     '''Получает загруженный файл, конвертирует, записывает в бд и '''
     async with async_session() as session:
-        query = select(User).where(User.user_id == user_id and User.token == token)
-        user = (await session.execute(query)).first()
-
+        user = None
+        if 32 <= len(token) <= 36:
+            query = select(User).where((User.user_id == user_id) & (User.token == token))
+            user = (await session.execute(query)).first()
         if user is None:
             raise HTTPException(status_code=404, detail='Пользователь или токен заданы некорректно')
         else:
@@ -46,7 +47,7 @@ async def convert_audio_and_add_in_db(user_id: int, token: str, wav_file: Upload
     return audio_id
 
 
-async def get_audio_from_db(user_id: int, audio_id: int):
+async def get_audio_from_db(user_id: int, audio_id: int) -> int:
     '''Получаем аудиозапись из бд'''
     query = select(Audio).where(Audio.audio_id == audio_id and Audio.user_id == user_id)
     async with async_session() as session:

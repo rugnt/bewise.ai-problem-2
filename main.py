@@ -18,6 +18,7 @@ media = settings.MEDIA_URL
 if not os.path.exists(media):
     os.mkdir(media)
 
+
 @app.get('/record')
 async def get_audio(user: str, id: int) -> FileResponse:
     '''Получение аудиозаписи'''
