@@ -34,7 +34,7 @@ services:
     networks:
       - custom
     volumes:
-      - media:./media
+      - media:/home/workdir/media
   alembic_migrations:
     container_name: alembic_migrations
     image: alembic_migrations
