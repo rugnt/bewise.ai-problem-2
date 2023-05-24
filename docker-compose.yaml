@@ -33,6 +33,8 @@ services:
       - "8000:8000"
     networks:
       - custom
+    volumes:
+      - media:./media
   alembic_migrations:
     container_name: alembic_migrations
     image: alembic_migrations
@@ -57,3 +59,4 @@ networks:
     driver: bridge
 volumes:
   db-data:
+  media:
