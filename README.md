@@ -1,26 +1,28 @@
 # `bewise.ai` второе тестовое задание
 
-## Установка
+## Для начало работы необходимо
 
-### Для начало работы необходимо
-
+- Установить <a href="https://docs.docker.com/engine/install/" target="_blank">docker</a> (если не установлен)
 - Установить <a href="https://docs.docker.com/compose/install/" target="_blank">docker-compose</a> (если не установлен)
-- Убедиться, что 8000 и 5432 порты открыты
-- Убедиться, что нет контейнеров с названиями app, db и alembic_migrations
+- Запустить docker
+- Убедиться, что 8000 и 5432 порты свободны
+- Убедиться, что нет контейнеров с названиями app, db и alembic_migrations (Если у вас был установлен docker)
 
-### 1. Клонировать репозиторий
+## Установка приложения
+
+### 1. Клонируем репозиторий
 
     git clone https://github.com/rugnt/bewise.ai-problem-2.git
 
-### 2. Перейти в директорию bewise.ai-problem-2
+### 2. Переходим в директорию bewise.ai-problem-2
 
     cd bewise.ai-problem-2
 
-### 3. Запустить docker-compose
+### 3. Запускаем docker-compose
 
     sudo docker-compose up --build
 
-### 4. Открыть приложение <a href="http://localhost:8000/docs" target="_blank"> http://localhost:8000/docs </a>
+### 4. Все готово. Открывает приложение <a href="http://localhost:8000/docs" target="_blank"> http://localhost:8000/docs </a>
 
 
 ## Пример работы
@@ -57,7 +59,3 @@
 ## При вводе неверных данных получаем ошибку
 
 ![изображение](https://github.com/rugnt/bewise.ai-problem-2/assets/93862774/8b2a2914-5d45-4fa7-9d53-d6eeeaa7262e)
-
-
-
-
