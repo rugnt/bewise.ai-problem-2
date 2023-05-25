@@ -10,15 +10,15 @@
 
 ### 1. Клонировать репозиторий
 
-    $ git clone https://github.com/rugnt/bewise.ai-problem-2.git
+    git clone https://github.com/rugnt/bewise.ai-problem-2.git
 
 ### 2. Перейти в директорию bewise.ai-problem-2
 
-    $ cd bewise.ai-problem-2
+    cd bewise.ai-problem-2
 
 ### 3. Запустить docker-compose
 
-    $ docker-compose up --build
+    sudo docker-compose up --build
 
 ### 4. Открыть приложение <a href="http://localhost:8000/docs" target="_blank"> http://localhost:8000/docs </a>
 
