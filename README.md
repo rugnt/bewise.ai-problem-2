@@ -22,7 +22,7 @@
 
     sudo docker-compose up --build
 
-### 4. Все готово. Открывает приложение <a href="http://localhost:8000/docs" target="_blank"> http://localhost:8000/docs </a>
+### 4. Все готово. Открываем приложение <a href="http://localhost:8000/docs" target="_blank"> http://localhost:8000/docs </a>
 
 
 ## Пример работы
